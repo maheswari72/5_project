@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <style>
+        h1{         
+         text-shadow: 5px 5px 10px red;
+        }
+        .content{
+            position:relative;
+            z-index: 1;
+            margin: auto;
+            color:black;
+            text-align: center;
+            padding: 90px;
+            height: 600px;
+            width: 300px;
+            background: rgb(250, 248, 249);
+            border-radius: 20px;
+        }
+   </style>
+    <style>
+        body {
+            background-image: url(hasi.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script>  
+        function validateemail()  
+        {  
+        var myemail=document.myform.email.value;  
+        var atposition=myemail.indexOf("@");  
+        var dotposition=myemail.lastIndexOf(".");  
+        if (atposition<1 || dotposition<atposition+2 || dotposition+2>=myemail.length){  
+          alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+          return false;  
+          }  
+        }  
+        </script>  
+    <body>
+        <center>
+            <div class="content">
+    
+        <h1>Registration Form</h1>
+        <form name="myform"  method="post" action="Login.html" onsubmit="return validateemail();">
+        First Name: <input type="text" name="fname"><br><br>
+        Last Name: <input type="text" name="lname"><br><br>
+        Gender:  <input type="radio" name="Gender" value="Male">Male<br><br>
+        <input type="radio" name="Gender" value="Female">Female<br><br>
+        <input type="radio" name="Gender" value="Others">Other<br><br>
+        Mobile Number: <input type="tel"  name="personal" id="per1" pattern="[0-9]{10}"><br><br>
+        Email: <input type="text" name="email"><br>      <br>
+        Address: <textarea name="atext"  cols="35" row="45"></textarea><br><br>
+        Date of Birth :<input type="date" name="birthday"><br> <br>    
+        City: <select name="city">
+            <option value="Select">---Select---</option>
+            <option value="Ongole">Ongole</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Banglore">Banglore</option> 
+            <option value="Chennai">Chennai</option>
+        </select><br><br>
+        State: <select name="state">
+            <option value="Select">---Select---</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Telengana">Telengana</option>
+            <option value="Karnataka">Karnataka</option> 
+            <option value="Tamil Nadu">Tamil Nadu</option>
+         </select><br><br>
+        Pin Code:<textarea name="ptext"  cols="5" row="2"></textarea><br><br>
+        <input type="submit" value="Register"><br><br>
+        <li><a href="project5.html"><input type="button" value="Exit"></a></li>
+    </form>
+    
+</form>
+    </center>
+    </div>
+    </body>
+</html>
